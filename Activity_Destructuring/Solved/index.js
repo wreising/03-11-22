@@ -4,9 +4,9 @@ const nodejs = {
   type: 'JavaScript runtime environment',
 };
 
-const { name, type } = nodejs;
+const { pkgName: name, type } = nodejs;
 
-console.log(pkgName); // <= Node.js
+console.log(name); // <= Node.js
 console.log(type); // <= JavaScript runtime environment
 
 // 2. Nested Object
@@ -26,7 +26,8 @@ const js = {
   },
 };
 
-const { framework1, framework2 } = js.tools.frameworks;
+const { tools: { frameworks: { framework1, framework2 } } } = js
+// const { framework1, framework2 } = js.tools.frameworks;
 
 console.log(framework1); // <= AngularJS
 console.log(framework2); // <= Vue.js
