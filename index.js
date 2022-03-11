@@ -42,3 +42,26 @@
 
 // console.log(x)
 // console.log(rest)
+
+function Animal (name, species, age, food) {
+  this.name = name
+  this.species = species
+  this.age = age
+  this.food = food
+  this.isSleeping = true
+  this.printInfo = function () {
+    console.log(`Hi! My name is ${this.name}! I am a ${this.species} and I am ${this.age} years old! I like to eat ${this.food}!`)
+  }
+}
+
+const animal1 = new Animal('Beef', 'Dog', 2, 'Kibble')
+const animal2 = new Animal('Maddie', 'Dog', 4, 'Veggies')
+const animal3 = new Animal('Rex', 'Turtle', 3, 'Crickets')
+
+// console.log(animal1)
+// console.log(animal2)
+// console.log(animal3)
+
+animal1.printInfo()
+animal2.printInfo()
+animal3.printInfo()
