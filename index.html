@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    function Animal(name, species, age, food) {
+      this.name = name
+      this.species = species
+      this.age = age
+      this.food = food
+      this.isSleeping = true
+      // this.printInfo = function () {
+      //   console.log(`Hi! My name is ${this.name}! I am a ${this.species} and I am ${this.age} years old! I like to eat ${this.food}!`)
+      // }
+    }
+
+    const animal1 = new Animal('Beef', 'Dog', 2, 'Kibble')
+
+    Animal.prototype.printInfo = function () {
+      console.log(`Hi! My name is ${this.name}! I am a ${this.species} and I am ${this.age} years old! I like to eat ${this.food}!`)
+    }
+
+    console.log(animal1.name.__proto__)
+
+    animal1.printInfo()
+
+  </script>
+</body>
+
+</html>
