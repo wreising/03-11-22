@@ -5,7 +5,7 @@ function Developer(name, tech) {
   this.tech = tech;
   this.introduction = () => {
     console.log(`Hi, my name is ${this.name} and I love ${this.tech}!`);
-  };
+  }
 }
 
 // Creates a new object using the 'Developer' constructor
